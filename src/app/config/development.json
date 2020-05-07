@@ -1,0 +1,14 @@
+{
+  "port": 5000,
+  "apiSlug": "/api/v1",
+  "secret": "secret",
+  "db": {
+    "host": "mongodb://localhost/test",
+    "options": {
+      "useNewUrlParser": true,
+      "useCreateIndex": true,
+      "useUnifiedTopology": true,
+      "autoIndex": true
+    }
+  }
+}

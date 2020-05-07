@@ -5,8 +5,8 @@ const circleModel = mongoose => {
   const circleSchema = new Schema({
     ownerId: { type: ObjectId, ref: 'User' },
     members: [{ type: ObjectId, ref: 'User' }],
-    created: { type: Date, default: Date.now },
-    updated: { type: Date, default: Date.now }
+    created: { type: SchemaTypes.Date, default: Date.now },
+    updated: { type: SchemaTypes.Date, default: Date.now }
   });
 
   return mongoose.model('Circle', circleSchema);

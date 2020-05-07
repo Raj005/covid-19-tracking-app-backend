@@ -12,8 +12,8 @@ const healthStatusModel = mongoose => {
     pandemics: [{ type: ObjectId, ref: 'Disease' }],
     pandemicHistory: [{ type: ObjectId, ref: 'Disease' }],
     emergency_problem: { type: ObjectId, ref: 'Disease' },
-    created: { type: Date, default: Date.now },
-    updated: { type: Date, default: Date.now }
+    created: { type: SchemaTypes.Date, default: Date.now },
+    updated: { type: SchemaTypes.Date, default: Date.now }
   });
 
   return mongoose.model('HealthStatus', healthStatusSchema);

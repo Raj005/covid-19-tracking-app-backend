@@ -11,8 +11,8 @@ const diseaseModel = mongoose => {
     isTreatable: { type: Boolean, default: true },
     isEpidemic: { type: Boolean, default: false },
     isPandemic: { type: Boolean, default: false },
-    created: { type: Date, default: Date.now },
-    updated: { type: Date, default: Date.now }
+    created: { type: SchemaTypes.Date, default: Date.now },
+    updated: { type: SchemaTypes.Date, default: Date.now }
   });
 
   return mongoose.model('Disease', diseaseSchema);
