@@ -14,6 +14,7 @@ class AppServer {
 
     // all other inits here for express server
     app.use(express.json());
+    app.use(express.urlencoded({ extended: false }));
 
     app.use(`${apiSlug}`, this.routes(router));
 

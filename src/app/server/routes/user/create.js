@@ -4,6 +4,7 @@ module.exports = ({ userService }) => async (req, res) => {
 
     const user = await userService.createUserService(data);
 
+    // output filtering can be done here or maybe at the middleware level
     res.json({ data: user });
   } catch (err) {
     // handle errors properly here, parse them for the clients
